@@ -1,0 +1,14 @@
+<h1>Edit Info:</h1>
+<form action="/Places/Details/@(Model.PlaceId)" method="post">
+  <label for="name">Place's Name</label>
+  <input id="name" name="name" type="text" value="@(Model.Name)">
+  <label for="country">Place's Country</label>
+  <input id="country" name="country" type="text" value="@(Model.Country)">
+  <label for="rating">Place's Rating</label>
+  <input id="rating" name="rating" type="number" value="@(Model.Rating)">
+  <label for="gender">Place's Gender</label>
+  <input id="gender" name="gender" type="text" value="@(Model.Gender)">
+  <button type="submit">Go!</button>
+</form>
+
+<a href="/Places/Details/@(Model.PlaceId)"><p>Return to Details</p></a>

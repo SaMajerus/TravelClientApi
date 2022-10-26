@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>New Review:</h1>
+
+<form action="/reviews" method="post">
+  <label for="UserName">Reviewers Username</label>
+  <input id="UserName" name="UserName" type="text">
+  <label for="Place">City</label>
+  <input id="Place" name="Place" type="text">
+  <label for="Country">Country</label>
+  <input id="Country" name="Country" type="text">
+  <label for="UserRating">Rating</label>
+  <input id="UserRating" name="UserRating" type="text">
+  <button type="submit">Go!</button>
+</form>
+
+<h1>All Reviews:</h1>
+<p>the error we're getting: RuntimeBinderException: Cannot convert type 'TravelClient.Models.Review' to 'TravelClient.Models.Place'</p>
+<ol>
+@foreach (Review review in Model)
+{
+  <ul>
+    <li>Name: @review.UserName</li>
+    <li>City: @review.Place</li>
+    <li>Review: @review.UserRating</li>
+  </ul>
+  <br>
+}
+</ol>
